@@ -1,0 +1,26 @@
+[
+    {
+    "location":{
+        "city":"london",
+        "zip_code":1234
+    },
+    "owner": "Hemanth",
+    "Area" : "150sqm",
+    "bed_rooms":3,
+    "bath_rooms":3,
+    "Price": "$5000",
+    "Contact_info":123456789
+},
+{
+    "location":{
+        "city":"birmingham",
+        "zip_code":1234
+    },
+    "owner": "Bhuvaan",
+    "Area" : "180sqm",
+    "bed_rooms":4,
+    "bath_rooms":3,
+    "Price": "$6000",
+    "Contact_info":123456789
+}
+]

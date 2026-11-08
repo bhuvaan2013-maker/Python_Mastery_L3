@@ -1,0 +1,6 @@
+SUBJECT NAME    MARKINGS
+maths    48
+physics    43
+chemistry    43
+english    50
+spanish    47
