@@ -1,22 +1,24 @@
-class Notebook:
-    def __init__(self,owner):
-        self.owner=owner
-    def write_note(self,text):
-        print(f"{self.owner} wrote: {text}")
-class Calculator:
-    def __init__(self,brand):
-        self.brand=brand
-    def add(self,a,b):
-        print(f"{self.brand} calculator says:{a}+{b}={a+b}")
-class Smartablet(Notebook,Calculator):
-    def __init__(self,owner,brand):
-        Notebook.__init__(self,owner)
-        Calculator.__init__(self,brand)
-owner1=input()
-brand1=input()
-text1=input()
-a=int(input())
-b=int(input())
-tablet=Smartablet(owner1,brand1)
-tablet.write_note(text1)
-tablet.add(a,b)
+class Cooker:
+    def __init__(self,robot_name,price):
+        self.robot_name=robot_name
+        self.price=price
+    def cook_dish(self,dish):
+        print(f"Cooking {dish}")
+class Cleaner:
+    def __init__(self,robot_name,price):
+        self.robot_name=robot_name
+        self.price=price
+    def clean_room(self,room):
+        print(f"Cleaning the {room}")
+class HouseRobot(Cooker,Cleaner):
+    def __init__(self,robot_name,price):
+        Cooker.__init__(self,robot_name,price)
+        Cleaner.__init__(self,robot_name,price)
+robot_name=input()
+price=int(input())
+dish=input()
+room=input()
+robo=HouseRobot(robot_name,price)
+print(f"{robo.robot_name} costs {robo.price}")
+robo.cook_dish(dish)
+robo.clean_room(room)
