@@ -65,8 +65,17 @@ class CustomerRental(RentalVehicle):
         else:
             print("Vehicle returned")
             self.available==True
-tung=CustomerRental(1,"Toyota","Circus",43,"Toby")
-tung.rent_vehicle()
-tung.set_rental_days(43)
-tung.calculate_bill()
-tung.return_vehicle()
+try:
+    tung=CustomerRental(1,"Toyota","Circus",13,"Toby")
+    tung.set_rental_days(11)
+    tung.rent_vehicle()
+    print(tung.calculate_bill())
+    tung.return_vehicle()
+except VehicleNotAvailableError as e:
+    print(e)
+except RentalPeriodExceededError as e:
+    print(e)
+except ValueError as e:
+    print(e)
+finally:
+    print("Thank you for using the car rental service")
